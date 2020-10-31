@@ -1,0 +1,15 @@
+[
+    {
+        "title": "Personal Portfolio Site",
+        "byline": "",
+        "bylinefaje": "What you're looking at right now!",
+        "link": "https://github.com/jessdesr/react-portfolio",
+        "description": "<p> Designed and implemented using the Vue.js framework, inspired by Material tiles and Single Page Application layouts.  The site is structured to be fairly reuseable, with most content inserted programatically, via a single constants file that can be modified easily.</p>"
+    },
+    {
+        "title": "Hack Track",
+        "byline": "Score tracker for Android: Netrunner",
+        "link": "https://github.com/jessdesr/hack-tracker",
+        "description": "Hack Track is an Android application for use with the <i>Android: Netrunner</i> card game. It keeps track of the various resources, tokens, and actions that take place in the game. <br/> <li>Variable click track using touch gestures to increment/decrement clicks</li><li>Flipped resource counts for opponent's convenience</li><li>Unique layouts for the Corporation and the Runner</li>"
+    }
+]
