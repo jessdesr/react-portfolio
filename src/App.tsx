@@ -61,13 +61,15 @@ function App() {
           </div>
         </div>
       </header>
-      <div className="projects-container">
-        <h2>Featured Project</h2>
-        <Projects data={project_data} featuredOnly={true} />
-        <button className="App-link">View more projects</button>
-      </div>
-      <div className="contact-container">
-        <EmailForm />
+      <div className="content">
+        <div className="projects-container">
+          <h2>Featured Project</h2>
+          <Projects data={project_data} featuredOnly={true} />
+          <button className="projects__button">View more projects</button>
+        </div>
+        <div className="contact-container">
+          <EmailForm />
+        </div>
       </div>
       <footer className="footer">
         <p>Designed & built in React.js by me!</p>
