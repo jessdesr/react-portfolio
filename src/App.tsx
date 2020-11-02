@@ -1,20 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.scss';
 import linkedinIcon from './assets/linkedin.svg';
 import githubIcon from './assets/github.svg';
 import codepenIcon from './assets/codepen.svg';
-import logo from './assets/logo.svg';
+import { ReactComponent as Logo } from './assets/logo.svg';
 import project_data from './data/project_data.json';
 import Projects from './Projects';
 import EmailForm from './EmailForm';
 
 function App() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <div className="App">
       <nav className="topbar">
         <div className="topbar__content">
           {/* <h2>Projects</h2> */}
-          <div className="hexagon"><img src={logo} /></div>
+          <Logo className="hexagon" />
+          <div className="menu-wrapper">
+            <div className={`hamburger-menu ${isOpen ? 'animate' : ''}`} onClick={() => {setIsOpen(!isOpen)}}></div>
+          </div>
           {/* <h2>Contact</h2> */}
         </div>
       </nav>
