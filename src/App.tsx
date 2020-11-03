@@ -3,26 +3,15 @@ import './App.scss';
 import linkedinIcon from './assets/linkedin.svg';
 import githubIcon from './assets/github.svg';
 import codepenIcon from './assets/codepen.svg';
-import { ReactComponent as Logo } from './assets/logo.svg';
 import project_data from './data/project_data.json';
 import Projects from './Projects';
 import EmailForm from './EmailForm';
+import Navbar from './Navbar';
 
 function App() {
-  const [isOpen, setIsOpen] = useState(false);
-
   return (
     <div className="App">
-      <nav className="topbar">
-        <div className="topbar__content">
-          {/* <h2>Projects</h2> */}
-          <Logo className="hexagon" />
-          <div className="menu-wrapper">
-            <div className={`hamburger-menu ${isOpen ? 'animate' : ''}`} onClick={() => {setIsOpen(!isOpen)}}></div>
-          </div>
-          {/* <h2>Contact</h2> */}
-        </div>
-      </nav>
+      <Navbar />
       <header style={{  }} className="head background-view">
         <div className="head__contents">
           <h1 className="head__title">
@@ -61,13 +50,13 @@ function App() {
           </div>
         </div>
       </header>
-      <div className="content">
-        <div className="projects-container">
+      <div className="">
+        <div className="projects-container content">
           <h2>Featured Project</h2>
           <Projects data={project_data} featuredOnly={true} />
           <button className="projects__button">View more projects</button>
         </div>
-        <div className="contact-container">
+        <div className="contact-container content">
           <EmailForm />
         </div>
       </div>
