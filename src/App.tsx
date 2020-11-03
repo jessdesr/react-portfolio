@@ -1,34 +1,33 @@
-import React, { useState } from 'react';
-import './App.scss';
-import linkedinIcon from './assets/linkedin.svg';
-import githubIcon from './assets/github.svg';
-import codepenIcon from './assets/codepen.svg';
-import project_data from './data/project_data.json';
-import Projects from './Projects';
-import EmailForm from './EmailForm';
-import Navbar from './Navbar';
+import React, { useState } from "react";
+import "./App.scss";
+import linkedinIcon from "./assets/linkedin.svg";
+import githubIcon from "./assets/github.svg";
+import codepenIcon from "./assets/codepen.svg";
+import project_data from "./data/project_data.json";
+import Projects from "./Projects";
+import EmailForm from "./EmailForm";
+import Navbar from "./Navbar";
 
 function App() {
   return (
     <div className="App">
       <Navbar />
-      <header style={{  }} className="head background-view">
+      <header style={{}} className="head background-view">
         <div className="head__contents">
           <h1 className="head__title">
-            Hey! <br/>I'm Jess Desrochers.
+            Hey! <br />
+            I'm Jess Desrochers.
           </h1>
-          <h3>
-            I'm a full-stack software developer from Vancouver, Canada.
-          </h3>
+          <h3>I'm a full-stack software developer from Vancouver, Canada.</h3>
           <div className="head__social">
-            <div className= "head__social--icons">
+            <div className="head__social--icons">
               <a
                 className="App-link"
                 href="https://www.linkedin.com/in/jessdesr/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img className="social-icon" src={linkedinIcon} width="30px"/>
+                <img className="social-icon" src={linkedinIcon} width="30px" />
               </a>
               <a
                 className="App-link"
@@ -36,7 +35,7 @@ function App() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img className="social-icon" src={githubIcon} width="30px"/>
+                <img className="social-icon" src={githubIcon} width="30px" />
               </a>
               <a
                 className="App-link"
@@ -44,7 +43,7 @@ function App() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img className="social-icon" src={codepenIcon} width="30px"/>
+                <img className="social-icon" src={codepenIcon} width="30px" />
               </a>
             </div>
           </div>

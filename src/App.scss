@@ -1,10 +1,9 @@
 $base-color: #202020;
-$accent-color: #3F3F3F;
-$font-color:   #FEFEFE;
-$feature-color: #A5BCB6;
-$bright-color: #FEFEFE;
+$accent-color: #3f3f3f;
+$font-color: #fefefe;
+$feature-color: #a5bcb6;
+$bright-color: #fefefe;
 $clip-path: polygon(0 0, 100% 0, 100% calc(100% - 50px), 0 100%);
-
 
 $layout-breakpoint-small: 48em;
 $layout-breakpoint-medium: 64em;
@@ -16,8 +15,8 @@ $layout-breakpoint-large: 960px;
 
 body {
   background-color: $base-color;
-  color:$font-color;
-  font-family: 'Kumbh Sans', sans-serif;
+  color: $font-color;
+  font-family: "Kumbh Sans", sans-serif;
 }
 
 .topbar {
@@ -43,7 +42,6 @@ body {
 
   .hexagon {
     height: 100%;
-    
   }
 
   svg {
@@ -62,7 +60,6 @@ body {
   padding-right: 15px;
   // background-image: url(./assets/background.jpg);
 
-
   &__contents {
     margin-top: 0;
     display: flex;
@@ -76,27 +73,31 @@ body {
 
   &__title {
     max-width: 500px;
-    line-height: .9em;
+    line-height: 0.9em;
     letter-spacing: -2px;
   }
 
   &::before {
-    background: linear-gradient(to bottom,rgba(0,0,0,.4),rgba(255,255,255,0));
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.4),
+      rgba(255, 255, 255, 0)
+    );
     bottom: 0;
-    content: '';
+    content: "";
     left: 0;
     position: absolute;
     right: 0;
     top: 0;
     z-index: -1;
   }
-  
+
   h1 {
-    font-family: 'Abril Fatface', cursive;
+    font-family: "Abril Fatface", cursive;
     font-size: 3.5rem;
     margin-bottom: 20px;
   }
-  
+
   h3 {
     // font-weight: bold;
     font-size: 1.25rem;
@@ -113,19 +114,20 @@ body {
     margin-top: 20px;
     width: 100%;
     bottom: 0;
-    
-    
+
     &--icons {
       display: flex;
       width: 200px;
       justify-content: space-evenly;
     }
-      
   }
 }
 
-
-h1, h2, h3, h4, h5 {
+h1,
+h2,
+h3,
+h4,
+h5 {
   font-weight: normal;
   margin: 0;
 }
@@ -149,7 +151,6 @@ h2 {
   align-items: center;
 }
 
-
 .projects-list {
   margin: 0;
   padding: 0;
@@ -170,7 +171,7 @@ h2 {
     box-shadow: 0 10px 30px -15px black;
 
     &__image {
-      width:100%;
+      width: 100%;
     }
   }
 }
@@ -197,7 +198,7 @@ h2 {
 #contact-form {
   width: 100%;
   max-width: 500px;
-  font-family: 'Montserrat', san-serif;
+  font-family: "Montserrat", san-serif;
   margin: auto;
 
   .form-group {
@@ -209,43 +210,42 @@ h2 {
       border: 1px solid transparentize(white, 0.6);
       background-color: transparentize(white, 0.8);
       width: 100%;
-      font-family: 'Montserrat', san-serif;
-      
+      font-family: "Montserrat", san-serif;
+
       border-radius: 3px;
       padding: 10px 15px;
       margin: 0 auto 10px auto;
       display: block;
-      
+
       color: $font-color;
-      
+
       transition-duration: 0.25s;
       font-weight: 300;
-      
-      &:hover{
-          background-color: transparentize(white, 0.6);
+
+      &:hover {
+        background-color: transparentize(white, 0.6);
       }
-      
-      &:focus{
-          background-color: white;
-          color: $accent-color;
+
+      &:focus {
+        background-color: white;
+        color: $accent-color;
       }
     }
-  
+
     &__label {
       display: block;
       text-transform: uppercase;
       position: static;
       margin: 10px 0px;
       padding: 0;
-      transition: all .3s ease-in-out;
-  
+      transition: all 0.3s ease-in-out;
+
       &.focused {
         padding-left: 5px;
       }
     }
   }
 }
-
 
 button {
   width: 100%;
@@ -257,7 +257,7 @@ button {
   background-color: $feature-color;
   color: $bright-color;
   border-radius: 3px;
-  font-family: 'Kumbh Sans', sans-serif;
+  font-family: "Kumbh Sans", sans-serif;
   text-transform: uppercase;
   cursor: pointer;
   font-size: 14px;
@@ -265,7 +265,7 @@ button {
 
   &:hover,
   &:focus {
-    background-color:$bright-color;
+    background-color: $bright-color;
     color: $feature-color;
     outline: 0;
   }
@@ -277,34 +277,36 @@ $bar-spacing: 8px;
 
 .menu-wrapper {
   width: $bar-width;
-	height: $bar-height + $bar-spacing*2;
-	cursor: pointer;
+  height: $bar-height + $bar-spacing * 2;
+  cursor: pointer;
 }
 
 .hamburger-menu,
 .hamburger-menu:after,
 .hamburger-menu:before {
   width: $bar-width;
-	height: $bar-height;
+  height: $bar-height;
 }
 
 .hamburger-menu {
-	position: relative;
-	transform: translateY($bar-spacing);
-	background: rgba(255, 255, 255, 1);
-  transition: all 0ms 300ms;  
-  
+  position: relative;
+  transform: translateY($bar-spacing);
+  background: rgba(255, 255, 255, 1);
+  transition: all 0ms 300ms;
+
   &.animate {
     background: rgba(255, 255, 255, 0);
     &:before {
       bottom: 0;
       transform: rotate(-45deg);
-      transition: bottom 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1);;
+      transition: bottom 300ms cubic-bezier(0.23, 1, 0.32, 1),
+        transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1);
     }
     &:after {
       top: 0;
       transform: rotate(45deg);
-      transition: top 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1);
+      transition: top 300ms cubic-bezier(0.23, 1, 0.32, 1),
+        transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1);
     }
   }
 
@@ -314,7 +316,8 @@ $bar-spacing: 8px;
     left: 0;
     bottom: $bar-spacing;
     background: rgba(255, 255, 255, 1);
-    transition: bottom 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+    transition: bottom 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1),
+      transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
   }
 
   &:after {
@@ -323,10 +326,10 @@ $bar-spacing: 8px;
     left: 0;
     top: $bar-spacing;
     background: rgba(255, 255, 255, 1);
-    transition: top 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+    transition: top 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1),
+      transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
   }
 }
-
 
 footer {
   font-size: 0.75rem;
